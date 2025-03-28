@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/frontend/src/assets/icons/logo/logoIco.png" type="image/x-icon">
+    <link rel="stylesheet" href="/frontend/src/styles/style.css">
+    <link rel="stylesheet" href="/frontend/src/styles/hs.css">
+    
+    <title>Harmonic Stream</title>
+</head>
+<body>
+    <div class="cardpr" id="stp">
+        <x id="xtp" onclick="stp.classList.remove('ac')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 15 15">
+            <path fill="currentColor" fill-rule="evenodd" d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z" clip-rule="evenodd" />
+          </svg>
+        </x>
+        <span class="card__title">Subscribe to Premium</span>
+        <p class="card__text">
+          ¡Hazte Premium y lleva tu experiencia al siguiente nivel!
+          🎉 Al comprar Premium, disfrutarás de una navegación sin anuncios,
+           acceso a funciones exclusivas como personalización avanzada, soporte prioritario y mucho más. 
+           🚀 si deseas apoyar directamente puedes hacerlo fácilmente a través de BuyMeACoffee o PayPal.
+            ¡Gracias por apoyar nuestro crecimiento y ser parte de nuestra comunidad! 💎
+        </p>
+        <button class="card__button" id="Premium" onclick="window.close('index.html'); window.open('bpuser.html');">Premium</button>
+        <button class="card__button2" id="BuyMeACoffee"><a href="https://buymeacoffee.com/echostream">BuyMeACoffee</a></button>
+        <button class="card__button3" id="Paypal"><a href="https://www.paypal.com/donate/?hosted_button_id=X98C6E9VW7WPS">Donar a Paypal</a></button>
+      </div>
+    <header id="hd">
+        <premium class="pr" id="ptm" style="transition: all .5s;" onclick="stp.classList.add('ac')">
+          <div class="tooltip-container" id="ptm">
+            <span class="tooltip" id="ptm">Premium</span>
+            <span class="text" id="ptm">Premium</span>
+            <span id="ptm">Support</span>
+          </div>
+        </premium>
+        <logo>
+          <img src="/frontend/src/assets/icons/logo/logoIco.png" alt="" draggable="false">
+          <img src="/frontend/src/assets/icons/logo/HarmonicText.png" class="I2 ht" alt="" draggable="false">
+        </logo>
+  
+        <div class="group">
+          <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+            <g>
+              <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+            </g>
+          </svg>
+          <input placeholder="Search for songs, artists..." type="search" class="input" id="sc">
+        </div>
+        <button class="brutalist-button b" id="b">
+          <div class="ms-logo">
+            <img src="/frontend/src/assets/icons/logo/logoIco.png" draggable="false" class="im">
+          </div>
+          <div class="button-text">
+            <span>Are you new in</span>
+            <span>Echo?</span>
+          </div>
+        </button>
+        
+        <userB id="usb" onclick="
+          set.classList.toggle('ac')
+        ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <circle cx="12" cy="6" r="4" fill="currentColor" />
+            <path fill="currentColor" d="M20 17.5c0 2.485 0 4.5-8 4.5s-8-2.015-8-4.5S7.582 13 12 13s8 2.015 8 4.5" opacity="0.5" />
+          </svg>
+          <iframe src="/frontend/frames/setframe.html" class="set" id="set"></iframe>
+        </userB>
+      </header>
+      <profile id="prf">
+        <div class="profile-info">
+          <img src="/frontend/src/assets/images/profile/default-avatar.jpg" alt="pp" id="user-avatar">
+          <button class="edit-btn" id="edit-btn">Edit Picture</button>
+          <input type="file" id="imageInput" style="display:none;">
+          <h1 id="user-name">Username</h1>
+          <p id="user-bio">This is your bio. Tell others about yourself!</p>
+          <button id="edb" class="edit-btn">Edit Bio</button>
+        </div>
+        
+        <div class="profile-stats">
+          <div class="stat">
+            <h3>Followers</h3>
+            <p id="followers-count">0</p>
+          </div>
+          <div class="stat">
+            <h3>Following</h3>
+            <p id="following-count">0</p>
+          </div>
+          <div class="stat">
+            <h3>Donations</h3>
+            <p id="donations-received">$0.00</p>
+          </div>
+        </div>
+      
+        <div class="membership-tier">
+          <h2>Membership</h2>
+          <p id="user-tier">No Membership</p>
+          <p id="user-tier-logo">
+            <img src="/frontend/src/assets/images/memberships/Echo core.jpg" alt="">
+          </p>
+          <button class="upgrade-btn">Upgrade Membership</button>
+        </div>
+      
+        <div class="recent-activity">
+          <h2>Recent Activity</h2>
+          <ul id="activity-list">
+            <li>No recent activity</li>
+          </ul>
+        </div>
+        
+        <div class="profile-actions">
+          <button class="settings-btn">Settings</button>
+          <button class="logout-btn" id="logout-btn">Logout</button>
+        </div>
+      </profile>
+      <content class="hs">
+        <div class="library">
+            <header>
+                <svg id="clo" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" class="svi p">
+                    <path fill="currentColor" fill-rule="evenodd" d="M15.328 7.542H8.672c-3.374 0-5.062 0-6.01.987s-.725 2.511-.278 5.56l.422 2.892c.35 2.391.525 3.587 1.422 4.303c.898.716 2.22.716 4.867.716h5.81c2.646 0 3.97 0 4.867-.716s1.072-1.912 1.422-4.303l.422-2.892c.447-3.049.67-4.573-.278-5.56s-2.636-.987-6.01-.987m-.74 2.623c-1.231-.526-2.645.265-2.727 1.527q-.005.083-.004.207v3.623a2.7 2.7 0 0 0-1.286-.321C9.151 15.2 8 16.275 8 17.6S9.151 20 10.571 20s2.572-1.074 2.572-2.4v-3.919l.928.462q.118.06.198.095c1.231.526 2.645-.266 2.728-1.528q.004-.082.003-.207v-.026l-.001-.093c-.021-.623-.387-1.192-.966-1.503l-.087-.044l-1.16-.578a4 4 0 0 0-.197-.094" clip-rule="evenodd" />
+                    <path fill="currentColor" d="M14.053 11.256c-.41-.175-.882.089-.909.51a4 4 0 0 0 0 .214a.6.6 0 0 0 .321.501l.058.03l1.135.564c.107.054.133.066.146.072c.41.175.882-.089.91-.51a4 4 0 0 0 0-.215a.6.6 0 0 0-.322-.5zM10.571 16.4c.71 0 1.286.538 1.286 1.2c0 .663-.575 1.2-1.286 1.2c-.71 0-1.285-.537-1.285-1.2s.575-1.2 1.285-1.2" />
+                    <path fill="currentColor" d="M8.51 2h6.98c.233 0 .41 0 .567.015c1.108.109 2.014.775 2.399 1.672H5.544c.385-.897 1.292-1.563 2.4-1.672C8.099 2 8.278 2 8.51 2" opacity="0.4" />
+                    <path fill="currentColor" d="M6.31 4.723c-1.39 0-2.53.84-2.91 1.953l-.024.07a8 8 0 0 1 1.232-.253c1.08-.138 2.446-.138 4.032-.138h6.892c1.586 0 2.952 0 4.032.138c.42.054.834.133 1.232.253l-.023-.07c-.38-1.114-1.52-1.953-2.911-1.953z" opacity="0.7" />
+                </svg>
+                <span class="ta p">Your Library</span>
+                
+                    <svg class="add p" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M13 6a1 1 0 1 0-2 0v5H6a1 1 0 1 0 0 2h5v5a1 1 0 1 0 2 0v-5h5a1 1 0 1 0 0-2h-5z" />
+                    </svg>
+
+                    <svg class="arrow ar p" id="ar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M14.143 15.962a.5.5 0 0 1-.244.68l-9.402 4.193c-1.495.667-3.047-.814-2.306-2.202l3.152-5.904c.245-.459.245-1 0-1.458L2.191 5.367c-.74-1.388.81-2.87 2.306-2.202l3.525 1.572a2 2 0 0 1 .974.932z" />
+                        <path fill="currentColor" d="M15.533 15.39a.5.5 0 0 0 .651.233l4.823-2.15c1.323-.59 1.323-2.355 0-2.945L12.109 6.56a.5.5 0 0 0-.651.68z" opacity="0.5" />
+                    </svg>
+            </header>
+        </div>
+        <div class="msclist">
+          <div class="msc">
+            <button class="p al" id="all">Todos</button>
+            <button class="p Mu" id="Music">Música</button>
+            <button class="p Po" id="Podcast">Podcast</button>
+            <button class="p li" id="library">Biblioteca</button>
+            <button class="p pl" id="playlist">Lista de reproducción</button>
+            <button class="p fa" id="favorites">Favoritos</button>
+          </div>
+          <div class="mscontent"></div>
+        </div>
+        <div class="inf" id="infor">
+        <a href="#" class="songtit p" id="sgt"></a>
+          <img src="" class="bgimg" alt="poster" id="movingImage">
+        </div>
+
+        <div class="musicr">
+          <div class="album-cover">
+              <img src="/storage/thumbnails/nasa.jpeg" alt="Album Cover" id="cover" />
+          </div>
+          <div class="music-info">
+              <h3 class="song-title" id="st">Cactus</h3>
+              <span class="song-album" id="sa">Flora</span>
+              <p class="artist-name">Nasa Histories</p>
+          </div>
+          <div class="controls">
+            <button class="prev-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#fff" d="M2 5a.75.75 0 0 1 1.5 0v14A.75.75 0 0 1 2 19z" opacity="0.5" />
+                <path fill="#fff" d="M8.09 14.647c-1.787-1.154-1.787-4.14 0-5.294l10.79-6.968c1.736-1.121 3.87.339 3.87 2.648v13.934c0 2.31-2.134 3.769-3.87 2.648z" />
+              </svg>
+            </button>
+            <button id="musciplayPauseBtn">
+              <svg id="musciplayIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="currentColor" fill-rule="evenodd" d="M23 12c0-1.035-.53-2.07-1.591-2.647L8.597 2.385C6.534 1.264 4 2.724 4 5.033V12z" clip-rule="evenodd"/>
+                  <path fill="currentColor" d="m8.597 21.615l12.812-6.968A2.99 2.99 0 0 0 23 12H4v6.967c0 2.31 2.534 3.769 4.597 2.648" opacity="0.5"/>
+              </svg>
+              <svg id="muscipauseIcon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M2 6c0-1.886 0-2.828.586-3.414S4.114 2 6 2s2.828 0 3.414.586S10 4.114 10 6v12c0 1.886 0 2.828-.586 3.414S7.886 22 6 22s-2.828 0-3.414-.586S2 19.886 2 18z"/>
+                  <path fill="currentColor" d="M14 6c0-1.886 0-2.828.586-3.414S16.114 2 18 2s2.828 0 3.414.586S22 4.114 22 6v12c0 1.886 0 2.828-.586 3.414S19.886 22 18 22s-2.828 0-3.414-.586S14 19.886 14 18z" opacity="0.5"/>
+              </svg>
+          </button>
+            <button class="next-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#fff" d="M22.75 5a.75.75 0 0 0-1.5 0v14a.75.75 0 0 0 1.5 0z" opacity="0.5" />
+                <path fill="#fff" d="M16.66 14.647c1.787-1.154 1.787-4.14 0-5.294L5.87 2.385C4.135 1.264 2 2.724 2 5.033v13.934c0 2.31 2.134 3.769 3.87 2.648z" />
+              </svg>
+            </button>
+            <button class="repeat-btn">
+              <svg id="tro" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#fff" fill-rule="evenodd" d="M2.75 12a4.25 4.25 0 0 1 6.8-3.4a.75.75 0 1 0 .901-1.2A5.75 5.75 0 1 0 7 17.75c.784 0 1.464-.143 2.064-.435s1.079-.714 1.489-1.215c.66-.804 1.196-1.894 1.776-3.074l.339-.689a.755.755 0 0 0-.339-1.008a.745.745 0 0 0-1.003.337l-.366.743c-.584 1.183-1.027 2.082-1.567 2.74c-.307.375-.624.64-.986.817s-.81.284-1.407.284A4.25 4.25 0 0 1 2.75 12" clip-rule="evenodd" />
+                <path fill="#fff" d="M12.67 12.335a.755.755 0 0 0-.34-1.006a.746.746 0 0 0-.975.284q.162-.323.316-.639c.58-1.18 1.117-2.27 1.776-3.074c.41-.501.89-.923 1.49-1.215S16.217 6.25 17 6.25a5.75 5.75 0 1 1-3.45 10.35a.75.75 0 0 1 .9-1.2A4.25 4.25 0 1 0 17 7.75c-.596 0-1.045.107-1.406.284c-.363.176-.68.442-.987.816c-.54.66-.983 1.558-1.567 2.741q-.174.355-.369.744z" opacity="0.5" />
+              </svg>
+            </button>
+            <button class="shuffle-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#fff" d="M2 16.25a.75.75 0 0 0 0 1.5zm8.748-2.163l-.643-.386zm2.504-4.174l.643.386zM22 7l.53.53a.75.75 0 0 0 0-1.06zm-2.53 1.47a.75.75 0 0 0 1.06 1.06zm1.06-4a.75.75 0 1 0-1.06 1.06zm-5.31 2.92l-.369-.653zM2 17.75h3.603v-1.5H2zm9.39-3.277l2.505-4.174l-1.286-.772l-2.504 4.174zm7.007-6.723H22v-1.5h-3.603zm3.073-1.28l-2 2l1.06 1.06l2-2zm1.06 0l-2-2l-1.06 1.06l2 2zm-8.635 3.829c.434-.724.734-1.22 1.006-1.589c.263-.355.468-.543.689-.668l-.739-1.305c-.467.264-.82.627-1.155 1.08c-.326.44-.668 1.011-1.087 1.71zm4.502-4.049c-.815 0-1.48 0-2.025.052c-.562.055-1.054.17-1.521.435l.739 1.305c.22-.125.487-.204.927-.247c.456-.044 1.036-.045 1.88-.045zM5.603 17.75c.815 0 1.48 0 2.025-.052c.562-.055 1.054-.17 1.521-.435l-.739-1.305c-.22.125-.487.204-.927.247c-.456.044-1.036.045-1.88.045zm4.502-4.049c-.435.724-.734 1.22-1.006 1.589c-.263.355-.468.543-.689.668l.74 1.305c.466-.264.819-.627 1.154-1.08c.326-.44.668-1.011 1.087-1.71z" />
+                <path fill="#fff" d="M2 7.75a.75.75 0 0 1 0-1.5zm8.748 2.163l-.643.386zm2.504 4.174l.643-.386zM22 17l.53-.53a.75.75 0 0 1 0 1.06zm-2.53-1.47a.75.75 0 1 1 1.06-1.06zm1.06 4a.75.75 0 1 1-1.06-1.06zm-5.31-2.92l-.369.653zM2 6.25h3.603v1.5H2zm9.39 3.277l2.505 4.174l-1.286.772l-2.504-4.174zm7.007 6.723H22v1.5h-3.603zm3.073 1.28l-2-2l1.06-1.06l2 2zm1.06 0l-2 2l-1.06-1.06l2-2zm-8.635-3.829c.434.724.734 1.22 1.006 1.589c.263.355.468.543.689.668l-.739 1.305c-.467-.264-.82-.627-1.155-1.08c-.326-.44-.668-1.011-1.087-1.71zm4.502 4.049c-.815 0-1.48 0-2.025-.052c-.562-.055-1.054-.17-1.521-.435l.739-1.305c.22.125.487.204.927.247c.456.044 1.036.045 1.88.045zM5.603 6.25c.815 0 1.48 0 2.025.052c.562.055 1.054.17 1.521.435L8.41 8.042c-.22-.125-.487-.204-.927-.247c-.456-.044-1.036-.045-1.88-.045zm4.502 4.049c-.435-.724-.734-1.22-1.006-1.589c-.263-.355-.468-.543-.689-.668l.74-1.305c.466.264.819.627 1.154 1.08c.326.44.668 1.011 1.087 1.71z" opacity="0.5" />
+              </svg>
+            </button>
+            
+            <audio id="audio-player">
+                <source src="/storage/songs/test.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+    
+              <input type="range" id="musicprogressBar" value="0" min="0" step="1">
+    
+            <div class="volume-control">
+          <button id="muteBtn3">
+                <svg id="volumeMute3" style="display: none;" class="v" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21.78 3.53a.75.75 0 0 0-1.06-1.06l-4.45 4.449a11 11 0 0 0-.193-1.39c-.172-.788-.477-1.473-1.116-1.923a3 3 0 0 0-.769-.39c-.818-.28-1.631-.057-2.457.345c-.814.395-1.8 1.046-3.032 1.857l-.267.176c-.447.295-.602.394-.76.464q-.257.115-.535.16c-.171.03-.354.032-.89.032h-.162c-1.217 0-2.062-.001-2.814.347A3.96 3.96 0 0 0 1.548 8.22c-.392.729-.438 1.491-.504 2.575l-.008.13C1.014 11.294 1 11.658 1 12s.014.706.036 1.074l.008.13c.066 1.084.112 1.846.504 2.575a3.96 3.96 0 0 0 1.727 1.624c.61.283 1.283.336 2.166.345L2.72 20.47a.75.75 0 1 0 1.06 1.06z"/><path fill="currentColor" d="m16.238 9.072l-8.624 8.624c.396.475 1.412 1.118 1.725 1.304c1.038.68 1.898 1.225 2.631 1.55c.742.328 1.48.488 2.222.235a3 3 0 0 0 .769-.391c.706-.496 1.005-1.28 1.167-2.18c.159-.884.213-2.056.281-3.516l.003-.058A68 68 0 0 0 16.5 12v-.108c.003-.567.012-2.43-.262-2.82m4.276-2.755a.75.75 0 0 1 .992.375c.467 1.035.994 2.768.994 5.308c0 2.192-.392 3.783-.8 4.844c-.204.53-.41.925-.573 1.195a5 5 0 0 1-.288.425l-.008.01l-.003.003v.002s-.002.001-.577-.478l.575.48a.75.75 0 0 1-1.156-.956l.003-.005l.01-.013l.021-.028a3 3 0 0 0 .137-.212c.12-.198.288-.516.459-.961c.342-.889.7-2.297.7-4.306c0-2.326-.48-3.849-.86-4.691a.75.75 0 0 1 .374-.992M19.3 9.848a.75.75 0 1 0-1.468.305c.088.426.168 1.034.168 1.847c0 .99-.118 1.677-.227 2.101a4 4 0 0 1-.179.534l-.005.01a.75.75 0 0 0 1.316.72L18.251 15c.654.363.655.362.655.362v-.001l.003-.003l.003-.008l.01-.018l.026-.053q.031-.064.076-.175a5 5 0 0 0 .202-.631c.142-.551.274-1.364.274-2.474c0-.91-.09-1.622-.2-2.152" opacity="0.4"/></svg> 
+                <svg id="volumeMedium3" class="v" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M2.003 11.716c.037-1.843.056-2.764.668-3.552a3 3 0 0 1 .413-.431c.752-.636 1.746-.636 3.733-.636c.71 0 1.065 0 1.403-.092q.105-.03.209-.067c.33-.121.627-.33 1.22-.746c2.338-1.645 3.508-2.467 4.489-2.11c.188.069.37.168.533.29c.848.635.913 2.115 1.042 5.073c.048 1.096.08 2.034.08 2.555s-.032 1.46-.08 2.555c-.13 2.958-.194 4.438-1.042 5.073a2.1 2.1 0 0 1-.533.29c-.982.357-2.15-.465-4.49-2.11c-.592-.416-.889-.625-1.22-.746a3 3 0 0 0-.208-.067c-.338-.092-.693-.092-1.403-.092c-1.987 0-2.98 0-3.733-.636a3 3 0 0 1-.413-.43c-.612-.79-.63-1.71-.668-3.552a14 14 0 0 1 0-.57"/><path fill="currentColor" fill-rule="evenodd" d="M19.49 5.552a.66.66 0 0 1 .97.094l-.53.471l.53-.47h.002v.002l.004.004l.007.009l.078.112a5 5 0 0 1 .187.305c.149.265.339.652.526 1.171C21.64 8.291 22 9.851 22 12s-.36 3.71-.736 4.75c-.187.52-.377.907-.526 1.172a5 5 0 0 1-.265.417l-.007.009l-.003.003l-.001.002s-.001.001-.531-.47l.53.471a.66.66 0 0 1-.972.094a.77.77 0 0 1-.091-1.03l.003-.005l.028-.04a3 3 0 0 0 .126-.208c.11-.195.264-.506.422-.943c.314-.871.643-2.252.643-4.222c0-1.969-.329-3.35-.643-4.222a6 6 0 0 0-.422-.942a3 3 0 0 0-.126-.207l-.028-.041l-.003-.004" clip-rule="evenodd" opacity="0.4"/><path fill="currentColor" fill-rule="evenodd" d="M17.757 8.416c.333-.197.753-.07.938.286l-.603.357l.603-.357l.001.002l.002.003l.003.007l.01.018l.024.053q.028.063.07.17c.053.145.12.35.185.62c.13.54.252 1.337.252 2.425c0 1.089-.122 1.886-.252 2.426c-.065.27-.132.475-.186.619a3 3 0 0 1-.094.223l-.009.018l-.003.007l-.002.003v.002s-.001.001-.604-.356l.603.357c-.185.355-.605.483-.938.286c-.33-.196-.45-.638-.272-.991l.004-.01l.035-.085c.032-.086.08-.23.13-.438c.1-.416.208-1.09.208-2.06c0-.971-.108-1.645-.208-2.061a4 4 0 0 0-.165-.523l-.004-.01c-.179-.354-.058-.796.272-.991" clip-rule="evenodd" opacity="0.7"/></svg>
+                <svg id="volumeLow" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="#fff" d="M3.003 11.716c.04-1.843.059-2.764.697-3.552c.117-.144.288-.315.432-.431c.785-.636 1.822-.636 3.897-.636c.741 0 1.112 0 1.465-.092q.11-.03.218-.067c.345-.121.654-.33 1.273-.746c2.442-1.645 3.662-2.467 4.687-2.11c.196.069.387.168.556.29c.886.635.953 2.115 1.088 5.073c.05 1.096.084 2.034.084 2.555s-.034 1.46-.084 2.555c-.134 2.958-.202 4.438-1.088 5.073c-.17.122-.36.221-.556.29c-1.025.357-2.245-.465-4.687-2.11c-.619-.416-.928-.625-1.273-.746a3 3 0 0 0-.218-.067c-.353-.092-.724-.092-1.465-.092c-2.075 0-3.112 0-3.897-.636a3 3 0 0 1-.432-.43c-.638-.79-.658-1.71-.697-3.552a13 13 0 0 1 0-.57" />
+                  <path fill="#fff" fill-rule="evenodd" d="M19.45 8.416a.71.71 0 0 1 .98.286l-.63.357l.63-.357l.001.002l.002.003l.003.007l.01.018a2 2 0 0 1 .098.224c.056.144.126.349.194.619c.135.54.262 1.337.262 2.425c0 1.089-.127 1.886-.262 2.426c-.068.27-.138.475-.194.619a3 3 0 0 1-.098.223l-.01.018l-.003.007l-.002.003v.002s-.001.001-.63-.356l.629.357a.71.71 0 0 1-.98.286a.744.744 0 0 1-.284-.991l.005-.01l.036-.085a4 4 0 0 0 .136-.438c.104-.416.217-1.09.217-2.06c0-.971-.113-1.645-.217-2.061a4 4 0 0 0-.172-.523l-.005-.01a.744.744 0 0 1 .285-.991" clip-rule="evenodd" opacity="0.5" />
+                </svg>
+        </button>
+        <input type="range" class="volume-slider" id="volume" value="100" max="100" step="1">
+      </div>
+      <button class="info" id="inf">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
+          <path fill="#fff" d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M6 5.883a.5.5 0 0 1 .757-.429l3.528 2.117a.5.5 0 0 1 0 .858l-3.528 2.117a.5.5 0 0 1-.757-.43V5.884z" />
+        </svg>
+      </button>
+        </div>
+    </div>
+      
+      </content>
+      
+</body>
+<script>
+    const prfElement = document.getElementById("prf");
+    
+    setInterval(() => {
+      let profclick = JSON.parse(localStorage.getItem("profclick"));
+    
+      if (profclick === true) {
+        prfElement.classList.add("ac");
+      } else if (profclick === false) {
+        prfElement.classList.remove("ac");
+      }
+    }, 100);
+    
+      </script>
+<script src="/frontend/src/functions/music.js"></script>
+<!-- <script src="/frontend/src/functions/cursors.js"></script> -->
+<script src="/frontend/src/functions/hs.js"></script>
+<script src="/frontend/src/functions/count.js"></script>
+<script src="/frontend/src/functions/functions.js"></script>
+<script src="/frontend/src/functions/special.js"></script>
+<script src="/frontend/src/functions/videos.js"></script>
+<script src="/frontend/src/functions/name.js"></script>
+</html>

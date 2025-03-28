@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/frontend/src/assets/icons/logo/logoIco.png" type="image/x-icon">
+    <link rel="stylesheet" href="/frontend/src/styles/style.css">
+    <link rel="stylesheet" href="/frontend/src/styles/cli.css">
+    
+    <title>Echo Stream - registrar/iniciar sesion</title>
+</head>
+<body>
+    <loginsignup id="ls" class="ac">
+        <div class="wrapper">
+            <div class="card-switch">
+                <label class="switch">
+                   <input type="checkbox" class="toggle">
+                   <span class="slider"></span>
+                   <span class="card-side"></span>
+                   <div class="flip-card__inner">
+                      <div class="flip-card__front">
+                         <div class="title">Log in</div>
+                         <form class="flip-card__form" action="">
+                            <input class="flip-card__input" name="email" placeholder="Email" type="email">
+                            <input class="flip-card__input" name="password" placeholder="Password" type="password">
+                            <button id="p" class="flip-card__btn">Let`s go!</button>
+                         </form>
+                      </div>
+                      <div class="flip-card__back">
+                         <div class="title">Sign up</div>
+                         <form class="flip-card__form" action="">
+                            <input class="flip-card__input" placeholder="Name" type="name" id="nm">
+                            <input class="flip-card__input" name="email" placeholder="Email" type="email">
+                            <input id="pas" class="flip-card__input" name="password" placeholder="Password" type="password">
+                            <button class="flip-card__btn" id="sv">Confirm!</button>
+                         </form>
+                         <button onclick="generarPassword()" class="flip-card__btn btn2">Generar Contraseña</button>
+                      </div>
+                   </div>
+                </label>
+            </div>   
+       </div>
+    </loginsignup>
+    <button id="sin2" class="sin">Registro ></button>
+</body>
+<!-- Codigo del cursor personalizado -->
+<!-- <script src="/frontend/src/functions/cursors.js"></script> -->
+<script src="/frontend/src/functions/functions.js"></script>
+<script src="/frontend/src/functions/rp.js"></script>
+<script src="/frontend/src/functions/incognita.js"></script>
+<script src="/frontend/src/functions/name.js"></script>
+</html>

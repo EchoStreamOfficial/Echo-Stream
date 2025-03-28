@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail - Interfaz</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="/frontend/src/assets/icons/logo/logoIco.png" type="image/x-icon">
+    <link rel="stylesheet" href="/frontend/src/styles/mail.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1><span class="material-icons">mail</span> Gmail</h1>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li class="active"><a href="#"><span class="material-icons">inbox</span> Recibidos</a></li>
+                    <li><a href="#"><span class="material-icons">star</span> Destacados</a></li>
+                    <li><a href="#"><span class="material-icons">send</span> Enviados</a></li>
+                    <li><a href="#"><span class="material-icons">drafts</span> Borradores</a></li>
+                    <li><a href="#"><span class="material-icons">delete</span> Papelera</a></li>
+                </ul>
+            </nav>
+            <div class="compose-button">
+                <button id="compose-btn"><span class="material-icons">edit</span> Redactar</button>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="content">
+            <header class="header">
+                <div class="actions">
+                    <div class="checkbox">
+                        <input type="checkbox" id="select-all">
+                        <label for="select-all"><span class="material-icons">check_box_outline_blank</span></label>
+                    </div>
+                    <div class="action-buttons">
+                        <button id="refresh-btn"><span class="material-icons">refresh</span></button>
+                        <button id="more-options-btn"><span class="material-icons">more_vert</span></button>
+                        <button id="important-btn"><span class="material-icons">label_important</span></button>
+                        <button id="delete-btn"><span class="material-icons">delete</span></button>
+                        <button id="mark-read-btn"><span class="material-icons">mark_email_read</span></button>
+                    </div>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Buscar en correo...">
+                    <button class="search-button"><span class="material-icons">search</span></button>
+                </div>
+                <div class="user-info">
+                    <span class="material-icons">account_circle</span>
+                </div>
+            </header>
+
+            <section class="email-list" id="email-list">
+                <div class="email-item">
+                    <input type="checkbox" class="email-checkbox">
+                    <span class="material-icons star">star_border</span>
+                    <div class="email-details">
+                        <strong>Remitente 1</strong>
+                        <p>Asunto del correo - Breve descripción del contenido del mensaje.</p>
+                    </div>
+                    <span class="timestamp">12:30 PM</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/frontend/src/functions/mail.js"></script>
+</body>
+</html>
